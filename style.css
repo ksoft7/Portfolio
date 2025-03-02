@@ -25,6 +25,7 @@ body {
   background-color: var(--bg-color);
   color: var(--general-color);
   font-family: var(--general-font);
+  overflow-x: hidden;
 }
 
 header {
@@ -78,7 +79,7 @@ header ul li a {
   border: none;
 }
 
-/* hero_content */
+/***************** hero_content ****************/
 .hero_sec {
   display: flex;
   justify-content: space-between;
@@ -87,7 +88,6 @@ header ul li a {
   margin: 5rem auto;
   margin-top: 15rem;
   align-items: center;
-  flex-wrap: wrap-reverse;
   /* text-shadow: 2px 2px 5px rgba(224, 219, 219, 0.5); */
 }
 
@@ -134,8 +134,8 @@ header ul li a {
 
 .hero_sec button:hover {
   box-shadow: 0 0 10px rgb(23, 200, 186);
-  color: #3e3f3f;
   filter: brightness(110%);
+  color: #3e3f3f;
 }
 
 .filColor {
@@ -165,7 +165,7 @@ header ul li a {
   filter: brightness(250%);
 }
 
-/* education */
+/*************** education ****************/
 .education {
   display: flex;
   flex-flow: column nowrap;
@@ -265,14 +265,152 @@ header ul li a {
 .movelef1 {
   margin-left: -355px;
 }
+/*************** heading  ******************/
+.heading {
+  text-align: center;
+}
 
-/* .movelef {
-  position: absolute;
-  left: 0;
-} */
-@media (min-width: 1263px) {
+.heading h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+/*************** services  ******************/
+.services {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  width: 80%;
+  margin: 8rem auto;
+  margin-top: -10rem;
+}
+
+.services article {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.services article div {
+  border: 2px solid #252727;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  align-items: center;
+  background-color: #000;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(23, 200, 186);
+  filter: brightness(110%);
+}
+
+.services article div span {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(11, 216, 199);
+  filter: brightness(250%);
+  margin-top: 2rem;
+}
+
+.services article div h3 {
+  font-size: 2rem;
+  margin-top: 0.4rem;
+}
+
+.services article div p {
+  font-size: 1.3rem;
+  width: 50rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 1rem 0;
+  text-align: center;
+  color: #dbdbdb;
+}
+
+/**************** footer *****************/
+footer {
+  width: 80%;
+  margin: 5rem auto;
+  margin-top: 15rem;
+}
+
+footer form {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+footer form div {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+footer form input {
+  padding: 1.7rem 1.5rem;
+  border: 2px solid #1ec1b4;
+  outline: none;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 100%;
+  color: var(--general-color);
+}
+
+footer form textarea {
+  padding: 1.7rem 1.5rem;
+  border: 2px solid #1ec1b4;
+  outline: none;
+  background-color: transparent;
+  border-radius: 15px;
+  width: 100%;
+  color: var(--general-color);
+  height: 20rem;
+  resize: none;
+}
+
+footer form span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer form button {
+  padding: 1rem 2rem;
+  background-color: var(--general-blue);
+  box-shadow: 0 0 10px rgb(23, 200, 186);
+  filter: brightness(110%);
+  color: #000;
+  color: #008d8a;
+  cursor: pointer;
+  border: none;
+  border-radius: 17px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: var(--general-font);
+}
+
+@media (min-width: 1271px) {
   .education_content {
     width: 1011px;
+  }
+}
+
+@media (max-width: 1001px) {
+  .hero_sec figure img {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .hero_sec .hero_content p {
+    width: 100%;
   }
 }
 
@@ -282,5 +420,23 @@ header ul li a {
   }
   header ul {
     display: none;
+  }
+}
+@media (max-width: 840px) {
+  .hero_sec {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero_sec .hero_btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 750px) {
+  footer form {
+    flex-flow: column nowrap;
   }
 }
