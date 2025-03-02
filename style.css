@@ -29,22 +29,23 @@ body {
 }
 
 header {
+  width: 100%;
   background-color: #060606;
   display: flex;
   position: fixed;
   justify-content: space-between;
   padding: 2rem 0;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 
 header nav {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
 }
 
 header nav h1 {
@@ -81,11 +82,12 @@ header ul li a {
 
 /***************** hero_content ****************/
 .hero_sec {
+  max-width: 1440px;
+  width: 80%;
+  margin: 5rem auto;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  width: 80%;
-  margin: 5rem auto;
   margin-top: 15rem;
   align-items: center;
   /* text-shadow: 2px 2px 5px rgba(224, 219, 219, 0.5); */
@@ -167,10 +169,11 @@ header ul li a {
 
 /*************** education ****************/
 .education {
-  display: flex;
-  flex-flow: column nowrap;
+  max-width: 1440px;
   width: 80%;
   margin: 5rem auto;
+  display: flex;
+  flex-flow: column nowrap;
   margin-top: 15rem;
 }
 
@@ -277,11 +280,12 @@ header ul li a {
 
 /*************** services  ******************/
 .services {
+  max-width: 1440px;
+  width: 80%;
+  margin: 8rem auto;
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
-  width: 80%;
-  margin: 8rem auto;
   margin-top: -10rem;
 }
 
@@ -331,8 +335,90 @@ header ul li a {
   color: #dbdbdb;
 }
 
+/**************** skill *****************/
+.container {
+  max-width: 1440px;
+  width: 80%;
+  margin: 15rem auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+
+.container h2 {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.container p {
+  color: #666;
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.progress-wrapper {
+  text-align: center;
+}
+
+.progress {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 0 10px rgb(23, 200, 186); */
+  background-color: var(--general-blue);
+  border-radius: 50%;
+  filter: drop-shadow(2px 4px 6px rgba(18, 215, 199, 0.459));
+}
+
+.container svg {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.container circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.progress-bg {
+  stroke: #f2f0f0;
+  stroke-width: 14;
+  fill: none;
+}
+
+.progress-bar {
+  stroke: #1ec1b4;
+  stroke-width: 14;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+}
+
+.progress-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  /* color: #333; */
+}
+
+.skill-label {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /**************** footer *****************/
 footer {
+  max-width: 1440px;
   width: 80%;
   margin: 5rem auto;
   margin-top: 15rem;
@@ -397,9 +483,24 @@ footer form button {
   font-family: var(--general-font);
 }
 
-@media (min-width: 1271px) {
+@media (min-width: 1180px) {
   .education_content {
     width: 1011px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .education_content {
+    width: 800px;
+  }
+
+  .moverig {
+    position: absolute;
+    right: 0;
+  }
+
+  .movelef1 {
+    margin-left: -405px;
   }
 }
 
@@ -411,6 +512,29 @@ footer form button {
 
   .hero_sec .hero_content p {
     width: 100%;
+  }
+
+  .education_content {
+    width: 100%;
+  }
+  .movelef1 {
+    margin-left: 0;
+  }
+
+  .education_content article {
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+  }
+
+  .education_content .moverig {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+  }
+
+  .services {
+    margin-top: 10rem;
   }
 }
 
@@ -438,5 +562,23 @@ footer form button {
 @media (max-width: 750px) {
   footer form {
     flex-flow: column nowrap;
+  }
+}
+
+@media (max-width: 671px) {
+  .educ_con .texthol {
+    width: 100%;
+  }
+
+  .services article div p {
+    width: 100%;
+  }
+
+  .educ_con h3 {
+    text-align: center;
+  }
+
+  .educ_con p {
+    width: 100%;
   }
 }
