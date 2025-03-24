@@ -67,7 +67,7 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
     message: messageInput.value,
   };
 
-  const messageContainer = document.createElement("p");
+  const messageContainer = document.querySelector(".messageContainer");
   messageContainer.style.marginTop = "10px";
   messageContainer.style.fontWeight = "bold";
 
@@ -107,6 +107,4 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
 
   submitBtn.textContent = "Sent";
   submitBtn.disabled = false;
-
-  document.getElementById("contactForm").appendChild(messageContainer);
 });
