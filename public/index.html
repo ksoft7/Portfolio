@@ -218,12 +218,12 @@
       <span class="heading">
         <h1>Contact <span style="color: #04fee8">Me</span></h1>
       </span>
-      <form action="#">
+      <form id="contactForm" method="POST">
         <div>
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Phone Number" />
-          <input type="text" placeholder="Subject" />
+          <input id="name" type="text" placeholder="Full Name" />
+          <input id="email" type="email" placeholder="Email" />
+          <input id="telphone" type="tel" placeholder="Phone Number" />
+          <input id="subject" type="text" placeholder="Subject" />
         </div>
         <div>
           <textarea
@@ -232,7 +232,7 @@
             placeholder="Your Message"
           ></textarea>
           <span>
-            <button type="submit">Send Message</button>
+            <button class="submitBtn" type="submit">Send Message</button>
           </span>
         </div>
       </form>
