@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -165,6 +166,38 @@ header ul li a {
 .hero_sec figure img:hover {
   box-shadow: 0 0 22px rgb(23, 200, 186);
   filter: brightness(250%);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.socialLinks a {
+  background-color: #22f0de;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 22px rgb(23, 200, 186);
+  filter: brightness(250%);
+  transition: 0.5s;
+}
+
+.socialLinks a .icon {
+  color: #000;
+  font-weight: 500;
+}
+
+.socialLinks a:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 0 200px rgb(0, 255, 234);
+  filter: brightness(300%);
 }
 
 /*************** education ****************/
@@ -407,13 +440,101 @@ header ul li a {
   position: absolute;
   font-size: 20px;
   font-weight: bold;
-  /* color: #333; */
 }
 
 .skill-label {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+/**************** projects *****************/
+.projects {
+  max-width: 1440px;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.projects h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.projects article {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.outer {
+  width: 400px;
+  height: 250px;
+  background-color: var(--general-blue);
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  margin: 5rem;
+  border: 1px solid #243642;
+  cursor: pointer;
+}
+
+.outer img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner {
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #18335720, #243642a7, #2436429e);
+  text-align: center;
+  transition: 0.5s;
+  height: 100%;
+  bottom: -25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.inn2 {
+  background-image: linear-gradient(to bottom, #18335720, #09a3b48e, #09a3b4);
+}
+
+.inn3 {
+  background-image: linear-gradient(to bottom, #18335720, #05322d8c, #05322d);
+}
+
+.inner h2 {
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+}
+
+.inner a {
+  border: 1px solid #22f0de;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 22px rgba(23, 200, 185, 0.347);
+  color: #fff;
+  margin: 0.5rem auto;
+}
+
+.inner span {
+  margin-top: -7rem;
+}
+
+.outer:hover .inner {
+  transform: translateY(-25rem);
 }
 
 /**************** footer *****************/
@@ -559,6 +680,10 @@ footer p {
     text-align: center;
   }
 
+  .socialLinks {
+    margin: 2rem auto;
+  }
+
   .hero_sec .hero_btn {
     justify-content: center;
   }
@@ -585,5 +710,13 @@ footer p {
 
   .educ_con p {
     width: 100%;
+  }
+
+  .projects article {
+    gap: 7rem;
+  }
+
+  .outer {
+    margin: 0;
   }
 }

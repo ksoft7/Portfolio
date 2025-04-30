@@ -1,5 +1,16 @@
 "use strict";
 
+// Scroll into view actions
+
+function scrollIntoView(elementId) {
+  const element = document.querySelector(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.warn("Element not found:", elementId);
+  }
+}
+
 // Skill function
 function animateProgressBars() {
   const progressBars = document.querySelectorAll(".progress-bar");

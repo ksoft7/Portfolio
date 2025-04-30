@@ -6,6 +6,10 @@
     <title>My_Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
       rel="shortcut icon"
       href="./image/background__Ksoft-removebg-preview.png"
       type="image/x-icon"
@@ -16,11 +20,11 @@
       <nav>
         <h1>Kayo<span class="filColor">de</span></h1>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#education">Education </a></li>
-          <li><a href="#resume">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a id="home" href="#home">Home</a></li>
+          <li><a id="education" href="#education">Education </a></li>
+          <li><a id="Services" href="#Services">Services</a></li>
+          <li><a id="projects" href="#skills">Skills</a></li>
+          <li><a id="contact" href="#contact">Contact</a></li>
         </ul>
         <button class="ham">
           <svg
@@ -50,6 +54,15 @@
           reading, coding challenges, and learning from real-world experiences
           to stay sharp and innovative.
         </p>
+
+        <div class="socialLinks">
+          <a href="#tiktok"><i class="fab fa-tiktok icon"></i></a>
+          <a href="#instagram">
+            <i class="fa-brands fa-instagram icon"></i>
+          </a>
+          <a href="#linkedln"><i class="fa-brands fa-linkedin-in icon"></i> </a>
+          <a href="#github"><i class="fa-brands fa-github icon"></i></a>
+        </div>
 
         <span class="hero_btn">
           <button>Hire</button>
@@ -174,7 +187,7 @@
               <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
               <circle class="progress-bar" cx="60" cy="60" r="54"></circle>
             </svg>
-            <span class="progress-text" data-value="50">0%</span>
+            <span class="progress-text" data-value="80">0%</span>
           </div>
           <div class="skill-label">CSS</div>
         </div>
@@ -185,7 +198,7 @@
               <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
               <circle class="progress-bar" cx="60" cy="60" r="54"></circle>
             </svg>
-            <span class="progress-text" data-value="50">0%</span>
+            <span class="progress-text" data-value="70">0%</span>
           </div>
           <div class="skill-label">JavaScript</div>
         </div>
@@ -196,7 +209,7 @@
               <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
               <circle class="progress-bar" cx="60" cy="60" r="54"></circle>
             </svg>
-            <span class="progress-text" data-value="40">0%</span>
+            <span class="progress-text" data-value="65">0%</span>
           </div>
           <div class="skill-label">React</div>
         </div>
@@ -207,11 +220,53 @@
               <circle class="progress-bg" cx="60" cy="60" r="54"></circle>
               <circle class="progress-bar" cx="60" cy="60" r="54"></circle>
             </svg>
-            <span class="progress-text" data-value="40">0%</span>
+            <span class="progress-text" data-value="70">0%</span>
           </div>
           <div class="skill-label">Nodejs</div>
         </div>
       </div>
+    </section>
+
+    <section class="projects">
+      <h1>Projects</h1>
+      <article>
+        <div class="outer">
+          <img src="./image/iyaalnu.jpeg" alt="iyaalnu img" />
+          <div class="inner inn3">
+            <span>
+              <h2>Iyáláànú Centre</h2>
+              <p>Click to view project</p>
+              <a href="https://www.iyaalanu.com"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></a>
+            </span>
+          </div>
+        </div>
+        <div class="outer">
+          <img src="./image/rehabRec.jpeg" alt="rehab & recovery img" />
+          <div class="inner inn2">
+            <span>
+              <h2>Rehab & recovery</h2>
+              <p>Click to view project</p>
+              <a href="https://mphysiotech.onrender.com/aboutpage"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></a>
+            </span>
+          </div>
+        </div>
+        <div class="outer">
+          <img src="./image/jsCal.jpeg" alt="jsCalulator img" />
+          <div class="inner">
+            <span>
+              <h2>Js calculator</h2>
+              <p>Click to view project</p>
+              <a href="https://ksoft7.github.io/js-Quiz-app/"
+                ><i class="fa-solid fa-right-from-bracket"></i
+              ></a>
+            </span>
+          </div>
+        </div>
+      </article>
     </section>
 
     <footer>
