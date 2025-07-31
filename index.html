@@ -7,6 +7,12 @@
       name="description"
       content="olukayode Suleiman - Full Stack Developer portfolio. Explore web, mobile and backend projects."
     />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <meta
+      name="keywords"
+      content="Kayode Suleiman, Full Stack Developer, Portfolio, Web Development, Mobile App Development, Backend Development"
+    />
+    <meta name="author" content="Kayode Suleiman" />
     <meta property="og:title" content="Kayode Suleiman - Portfolio" />
     <meta property="og:description" content="Showcasing my portfolio." />
     <meta property="og:image" content="./image/preview.jpg" />
@@ -29,12 +35,49 @@
     <header>
       <nav>
         <h1>Kayo<span class="filColor">de</span></h1>
-        <ul>
-          <li><a id="home" href="#home">Home</a></li>
-          <li><a id="education" href="#education">Education </a></li>
-          <li><a id="Services" href="#Services">Services</a></li>
-          <li><a id="projects" href="#skills">Skills</a></li>
-          <li><a id="contact" href="#contact">Contact</a></li>
+        <ul class="styNav">
+          <li>
+            <a id="homes" href="#home" onclick="scrollIntoView('#home')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              id="educations"
+              href="#education"
+              onclick="scrollIntoView('#education')"
+              >Education
+            </a>
+          </li>
+          <li>
+            <a
+              id="service"
+              href="#Services"
+              onclick="scrollIntoView('#services')"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a id="skill" href="#skills" onclick="scrollIntoView('#skills')"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              id="project"
+              href="#projects"
+              onclick="scrollIntoView('#projects')"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              id="contact"
+              href="#contactForm"
+              onclick="scrollIntoView('contactForm')"
+              >Contact</a
+            >
+          </li>
         </ul>
         <button class="ham">
           <svg
@@ -53,7 +96,61 @@
       </nav>
     </header>
 
-    <section class="hero_sec">
+    <div id="overlay" onclick="closeSidebar()"></div>
+
+    <div class="mobile-sidebar styNav" id="mobileSidebar">
+      <button class="close-btn" id="closeBtn">×</button>
+      <li>
+        <a
+          id="homes"
+          href="#home"
+          onclick="scrollIntoView('#home'), closeSidebar()"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          id="educations"
+          href="#education"
+          onclick="scrollIntoView('#education'), closeSidebar()"
+          >Education
+        </a>
+      </li>
+      <li>
+        <a
+          id="service"
+          href="#Services"
+          onclick="scrollIntoView('#services'), closeSidebar()"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          id="skill"
+          href="#skills"
+          onclick="scrollIntoView('#skills'), closeSidebar()"
+          >Skills</a
+        >
+      </li>
+      <li>
+        <a
+          id="project"
+          href="#projects"
+          onclick="scrollIntoView('#projects'), closeSidebar()"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          id="contact"
+          href="#contactForm"
+          onclick="scrollIntoView('contactForm'), closeSidebar()"
+          >Contact</a
+        >
+      </li>
+    </div>
+
+    <section class="hero_sec" id="home">
       <article class="hero_content">
         <h1>Hello, I’m <span style="color: #04fee8">Kayode</span></h1>
         <h3>I’m a web developer</h3>
@@ -66,7 +163,8 @@
         </p>
 
         <div class="socialLinks">
-          <a href="www.tiktok.com/@ksoft6"
+          <a
+            href="https://www.tiktok.com/@ksoft6?_r=1&_d=ei7f1agbfb90lg&sec_uid=MS4wLjABAAAAFs97K49QnrF2F-Ht9FEecL-rUUf5mkYAQhif826DGUsZbuZvNoBkwQM6oveH3EIw&share_author_id=7458266764355683334&sharer_language=en&source=h5_m&u_code=ei7f1k71lkim8i&ug_btm=b8727,b0&social_share_type=4&utm_source=copy&sec_user_id=MS4wLjABAAAAFs97K49QnrF2F-Ht9FEecL-rUUf5mkYAQhif826DGUsZbuZvNoBkwQM6oveH3EIw&tt_from=copy&utm_medium=ios&utm_campaign=client_share&enable_checksum=1&user_id=7458266764355683334&share_link_id=F3F779F1-557D-440E-B00F-8B02C27DD2F2&share_app_id=1233"
             ><i class="fab fa-tiktok icon"></i
           ></a>
           <a href="#instagram">
@@ -110,7 +208,7 @@
       </figure>
     </section>
 
-    <section class="education">
+    <section class="education" id="education">
       <h1>Education</h1>
       <article class="education_content">
         <article class="movelef1">
@@ -178,7 +276,7 @@
       </article>
     </section>
 
-    <section class="services">
+    <section class="services" id="Services">
       <span class="heading">
         <h1>Services</h1>
       </span>
@@ -260,7 +358,7 @@
       </article>
     </section>
 
-    <section class="container">
+    <section class="skills" id="skills">
       <span class="heading">
         <h1>My Skills</h1>
       </span>
@@ -418,7 +516,7 @@
       </ul>
     </section> -->
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <h1>Projects</h1>
       <article>
         <div class="outer">
@@ -467,10 +565,10 @@
       <p class="messageContainer"></p>
       <form id="contactForm" method="POST">
         <div>
-          <input id="name" type="text" placeholder="Full Name" />
-          <input id="email" type="email" placeholder="Email" />
-          <input id="telphone" type="tel" placeholder="Phone Number" />
-          <input id="subject" type="text" placeholder="Subject" />
+          <input name="name" id="name" type="text" placeholder="Full Name" />
+          <input name="email" id="email" type="email" placeholder="Email" />
+          <input name="tel" id="tel" type="tel" placeholder="Phone Number" />
+          <!-- <input id="subject" type="text" placeholder="Subject" /> -->
         </div>
         <div>
           <textarea
@@ -479,13 +577,59 @@
             placeholder="Your Message"
           ></textarea>
           <span>
-            <button class="submitBtn" type="submit">Send Message</button>
+            <button class="submitBtn" id="submitBtn" type="submit">
+              Send Message
+            </button>
           </span>
         </div>
       </form>
     </footer>
 
     <p class="signature">Ksoft🤍</p>
+    <script>
+      (function () {
+        emailjs.init("SbA5skpjlkY_V-mzX"); // Replace with your public key
+      })();
+
+      const form = document.getElementById("contactForm");
+      const submitBtn = document.getElementById("submitBtn");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Simple validation check
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const message = form
+          .querySelector('textarea[name="message"]')
+          .value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in all required fields (Name, Email, Message)");
+          return;
+        }
+
+        // Indicate loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        emailjs
+          .sendForm("service_ekodgof", "template_9zls0kr", this)
+          .then(() => {
+            alert("Message sent successfully!");
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+          })
+          .catch((error) => {
+            console.error("FAILED...", error);
+            alert("Failed to send message. Please try again.");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+          });
+      });
+    </script>
+
     <script src="./script.js"></script>
   </body>
 </html>

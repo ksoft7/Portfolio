@@ -54,22 +54,22 @@ header nav h1 {
   font-weight: 700;
 }
 
-header ul {
+.styNav {
   display: flex;
   gap: 3.5rem;
 }
 
-header ul li a {
+.styNav li a {
   border-bottom: 0.3rem solid transparent;
   transition: 0.5s;
   padding-bottom: 0.3rem;
 }
-header ul li a:hover {
+.styNav li a:hover {
   border-bottom: 0.3rem solid var(--general-blue);
   color: var(--general-blue);
 }
 
-header ul li a {
+.styNav li a {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 600;
@@ -79,6 +79,51 @@ header ul li a {
   display: none;
   background: none;
   border: none;
+  cursor: pointer;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  background: #080808; /* Slight transparency */
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: right 0.6s ease; /* Slower animation */
+  z-index: 2001;
+  box-shadow: -0 0 15px rgb(23, 200, 186);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Dim effect */
+  z-index: 2000;
+  display: none;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+.mobile-sidebar.open + #overlay {
+  display: block;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /***************** hero_content ****************/
@@ -391,7 +436,7 @@ header ul li a {
 }
 
 /**************** skill *****************/
-.container {
+.skills {
   max-width: 1440px;
   width: 80%;
   margin: 15rem auto;
@@ -400,12 +445,12 @@ header ul li a {
   gap: 3rem;
 }
 
-.container h2 {
+.skills h2 {
   margin-bottom: 5px;
   text-align: center;
 }
 
-.container p {
+.skills p {
   color: #666;
   text-align: center;
 }
@@ -434,12 +479,12 @@ header ul li a {
   filter: drop-shadow(2px 4px 6px rgba(18, 215, 199, 0.459));
 }
 
-.container svg {
+.skills svg {
   position: absolute;
   transform: rotate(-90deg);
 }
 
-.container circle {
+.skills circle {
   fill: none;
   stroke-width: 10;
   stroke-linecap: round;
@@ -526,6 +571,12 @@ header ul li a {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   color: #ccc;
+}
+
+.submitBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 /**************** certifications *****************/
@@ -779,7 +830,7 @@ footer p {
   .ham {
     display: block;
   }
-  header ul {
+  header .styNav {
     display: none;
   }
 }
@@ -829,5 +880,11 @@ footer p {
 
   .outer {
     margin: 0;
+  }
+}
+
+@media (max-width: 525px) {
+  .mobile-sidebar {
+    width: 70%;
   }
 }
